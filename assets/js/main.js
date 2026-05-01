@@ -237,13 +237,13 @@
 			});
 
 		// Poptrox.
-			$main.poptrox({
+//			$main.poptrox({
 				baseZIndex: 20000,
 				caption: function($a) {
 
 					var s = '';
 
-					$a.nextAll().each(function() {
+//					$a.nextAll().each(function() {
 						s += this.outerHTML;
 					});
 
@@ -277,5 +277,13 @@
 				breakpoints.on('>xsmall', function() {
 					$main[0]._poptrox.windowMargin = 50;
 				});
+
+
+	// Play initial animations on page load.
+		$window.on('load', function() {
+			window.setTimeout(function() {
+				$body.removeClass('is-preload');
+			}, 100);
+		});
 
 })(jQuery);

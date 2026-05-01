@@ -143,13 +143,13 @@
 			// Hide on click.
 				if (config.hideOnClick) {
 
-					$this.find('a')
+//					$this.find('a')
 						.css('-webkit-tap-highlight-color', 'rgba(0,0,0,0)');
 
 					$this
-						.on('click', 'a', function(event) {
+//						.on('click', 'a', function(event) {
 
-							var $a = $(this),
+//							var $a = $(this),
 								href = $a.attr('href'),
 								target = $a.attr('target');
 
@@ -175,7 +175,7 @@
 
 						});
 
-				}
+//				}
 
 			// Event: Touch stuff.
 				$this.on('touchstart', function(event) {
